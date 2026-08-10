@@ -17,7 +17,6 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=henriquegallassini&label=PROFILE+VIEWS&style=for-the-badge&color=007ACC" alt="Profile Views" />
   <img src="https://img.shields.io/github/followers/henriquegallassini?style=for-the-badge&logo=github&label=FOLLOWERS" alt="Followers" />
   <img src="https://img.shields.io/github/stars/henriquegallassini?affiliations=OWNER&style=for-the-badge&logo=github&label=STARS" alt="Stars" />
 </p>
