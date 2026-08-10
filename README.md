@@ -43,8 +43,38 @@
 
 <p>
   <img
-    src="https://skillicons.dev/icons?i=py,cpp,js,ts&theme=dark"
-    alt="Python, C++, JavaScript and TypeScript"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+    width="55"
+    height="55"
+    alt="Python"
+    title="Python"
+  />
+  &nbsp;&nbsp;&nbsp;
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+    width="55"
+    height="55"
+    alt="C++"
+    title="C++"
+  />
+  &nbsp;&nbsp;&nbsp;
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    width="55"
+    height="55"
+    alt="JavaScript"
+    title="JavaScript"
+  />
+  &nbsp;&nbsp;&nbsp;
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    width="55"
+    height="55"
+    alt="TypeScript"
+    title="TypeScript"
   />
 </p>
 
@@ -52,8 +82,20 @@
 
 <p>
   <img
-    src="https://skillicons.dev/icons?i=html,css&theme=dark"
-    alt="HTML and CSS"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+    width="55"
+    height="55"
+    alt="HTML5"
+    title="HTML5"
+  />
+  &nbsp;&nbsp;&nbsp;
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+    width="55"
+    height="55"
+    alt="CSS3"
+    title="CSS3"
   />
 </p>
 
@@ -61,8 +103,20 @@
 
 <p>
   <img
-    src="https://skillicons.dev/icons?i=postgres,supabase&theme=dark"
-    alt="PostgreSQL and Supabase"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+    width="55"
+    height="55"
+    alt="PostgreSQL"
+    title="PostgreSQL"
+  />
+  &nbsp;&nbsp;&nbsp;
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+    width="55"
+    height="55"
+    alt="Supabase"
+    title="Supabase"
   />
 </p>
 
@@ -70,8 +124,29 @@
 
 <p>
   <img
-    src="https://skillicons.dev/icons?i=git,github,vscode&theme=dark"
-    alt="Git, GitHub and VS Code"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+    width="55"
+    height="55"
+    alt="Git"
+    title="Git"
+  />
+  &nbsp;&nbsp;&nbsp;
+
+  <img
+    src="https://cdn.simpleicons.org/github/181717/FFFFFF"
+    width="55"
+    height="55"
+    alt="GitHub"
+    title="GitHub"
+  />
+  &nbsp;&nbsp;&nbsp;
+
+  <img
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+    width="55"
+    height="55"
+    alt="Visual Studio Code"
+    title="Visual Studio Code"
   />
 </p>
 
@@ -79,9 +154,11 @@
 
 <p>
   <img
-    height="48"
     src="https://cdn.simpleicons.org/make/6D00CC"
-    alt="Make Automation"
+    width="55"
+    height="55"
+    alt="Make"
+    title="Make"
   />
 </p>
 
