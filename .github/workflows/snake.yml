@@ -2,16 +2,23 @@ name: Generate Contribution Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "17 */4 * * *"
 
   workflow_dispatch:
 
   push:
     branches:
       - main
+    paths:
+      - "README.md"
+      - ".github/workflows/snake.yml"
 
 permissions:
   contents: write
+
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: true
 
 jobs:
   generate:
@@ -29,9 +36,11 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Publish snake to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
           build_dir: dist
+          keep_history: true
+          commit_message: "chore: update contribution snake"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
