@@ -159,26 +159,10 @@ Python-based network port scanner using sockets.
 
 ## 📊 GitHub Analytics
 
-<p align="center">
-  <img
-    width="49%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=henriquegallassini&theme=github_dark"
-    alt="GitHub Stats"
-  />
-
-  <img
-    width="49%"
-    src="./generated/languages.svg"
-    alt="All Repository Languages"
-  />
-</p>
+<p align="center"><img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=henriquegallassini&theme=github_dark" alt="GitHub Stats" />&nbsp;<img width="48%" src="./generated/languages.svg" alt="All Repository Languages" /></p>
 
 <p align="center">
-  <img
-    width="98%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=henriquegallassini&theme=github_dark"
-    alt="GitHub Profile Details"
-  />
+  <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=henriquegallassini&theme=github_dark" alt="GitHub Profile Details" />
 </p>
 
 ---
