@@ -71,6 +71,18 @@
 
 ## ✨ Featured Projects
 
+<sub>Selected projects that best represent my current work and studies.</sub>
+
+<br><br>
+
+### 🧮 [BMI Calculator - JavaScript](https://github.com/henriquegallassini/Calculadora-IMC-Javascript)
+
+Interactive BMI calculator built with JavaScript, HTML and CSS.
+
+`JavaScript` `HTML5` `CSS3` `Frontend`
+
+---
+
 ### 🔎 [AI Reviewer CLI](https://github.com/henriquegallassini/AI-Reviewer-CLI-V.1.0.0)
 
 Intelligent Python code analyzer running directly in the terminal.
@@ -95,15 +107,39 @@ Automated workflow for document extraction, management and follow-up.
 
 ---
 
+## 🆕 Latest Repositories
+
+<sub>Automatically synchronized with my latest public GitHub repositories.</sub>
+
+<br><br>
+
+<!-- AUTO-REPOS:START -->
+_Repository list will be generated automatically by GitHub Actions._
+<!-- AUTO-REPOS:END -->
+
+---
+
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=henriquegallassini&theme=github_dark" alt="GitHub Stats" />
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=henriquegallassini&theme=github_dark" alt="Repositories per Language" />
+  <img
+    width="49%"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=henriquegallassini&theme=github_dark&animation=load&duration=2"
+    alt="GitHub Stats"
+  />
+  <img
+    width="49%"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=henriquegallassini&theme=github_dark&animation=load&duration=2"
+    alt="Repositories per Language"
+  />
 </p>
 
 <p align="center">
-  <img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=henriquegallassini&theme=github_dark" alt="GitHub Profile Details" />
+  <img
+    width="98%"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=henriquegallassini&theme=github_dark&animation=load&duration=2"
+    alt="GitHub Profile Details"
+  />
 </p>
 
 ---
