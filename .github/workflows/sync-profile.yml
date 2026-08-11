@@ -1,10 +1,16 @@
-name: Sync Latest Repositories
+name: Sync Profile Data
 
 on:
   schedule:
     - cron: "23 * * * *"
 
   workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-profile.yml"
 
 permissions:
   contents: write
@@ -21,7 +27,7 @@ jobs:
       - name: Checkout profile repository
         uses: actions/checkout@v7
 
-      - name: Update latest repositories
+      - name: Generate profile data
         env:
           OWNER: ${{ github.repository_owner }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,35 +39,63 @@ jobs:
           import os
           import re
           import urllib.request
+          from collections import defaultdict
+          from pathlib import Path
 
-          owner = os.environ["OWNER"]
-          token = os.environ["GH_TOKEN"]
-
+          OWNER = os.environ["OWNER"]
+          TOKEN = os.environ["GH_TOKEN"]
           API_VERSION = "2026-03-10"
 
+          # ---------------------------------------------------------
+          # GitHub API
+          # ---------------------------------------------------------
+
           def github_api(url):
+              headers = {
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": f"Bearer {TOKEN}",
+                  "X-GitHub-Api-Version": API_VERSION,
+                  "User-Agent": "henriquegallassini-profile-sync",
+              }
+
               request = urllib.request.Request(
                   url,
-                  headers={
-                      "Accept": "application/vnd.github+json",
-                      "Authorization": f"Bearer {token}",
-                      "X-GitHub-Api-Version": API_VERSION,
-                      "User-Agent": "github-profile-readme-sync",
-                  },
+                  headers=headers,
               )
 
               with urllib.request.urlopen(request) as response:
                   return json.load(response)
 
-          repos_url = (
-              f"https://api.github.com/users/{owner}/repos"
-              "?type=owner"
-              "&sort=pushed"
-              "&direction=desc"
-              "&per_page=100"
-          )
 
-          repositories = github_api(repos_url)
+          # ---------------------------------------------------------
+          # Load every public repository
+          # ---------------------------------------------------------
+
+          repositories = []
+          page = 1
+
+          while True:
+              url = (
+                  f"https://api.github.com/users/{OWNER}/repos"
+                  "?type=owner"
+                  "&sort=pushed"
+                  "&direction=desc"
+                  "&per_page=100"
+                  f"&page={page}"
+              )
+
+              batch = github_api(url)
+
+              if not batch:
+                  break
+
+              repositories.extend(batch)
+
+              if len(batch) < 100:
+                  break
+
+              page += 1
+
 
           repositories = [
               repo
@@ -69,15 +103,39 @@ jobs:
               if not repo.get("fork", False)
               and not repo.get("archived", False)
               and not repo.get("disabled", False)
-              and repo["name"].lower() != owner.lower()
+              and repo["name"].lower() != OWNER.lower()
           ]
 
-          repositories = repositories[:6]
 
-          blocks = []
+          # ---------------------------------------------------------
+          # Languages
+          # ---------------------------------------------------------
+
+          repository_languages = {}
+          language_totals = defaultdict(int)
 
           for repo in repositories:
               languages = github_api(repo["languages_url"])
+
+              repository_languages[repo["name"]] = languages
+
+              for language, byte_count in languages.items():
+                  language_totals[language] += byte_count
+
+
+          # ---------------------------------------------------------
+          # Update Latest Repositories
+          # ---------------------------------------------------------
+
+          latest_repositories = repositories[:6]
+
+          blocks = []
+
+          for repo in latest_repositories:
+              languages = repository_languages.get(
+                  repo["name"],
+                  {},
+              )
 
               top_languages = sorted(
                   languages.items(),
@@ -85,12 +143,12 @@ jobs:
                   reverse=True,
               )[:4]
 
-              language_badges = " ".join(
-                  f"`{language}`"
-                  for language, _ in top_languages
-              )
-
-              if not language_badges:
+              if top_languages:
+                  language_badges = " ".join(
+                      f"`{language}`"
+                      for language, _ in top_languages
+                  )
+              else:
                   language_badges = "`Repository`"
 
               description = repo.get("description")
@@ -101,19 +159,28 @@ jobs:
                       " ",
                       description,
                   ).strip()
+
                   description = html.escape(description)
               else:
                   description = "Public GitHub repository."
 
               pushed_at = datetime.datetime.fromisoformat(
-                  repo["pushed_at"].replace("Z", "+00:00")
+                  repo["pushed_at"].replace(
+                      "Z",
+                      "+00:00",
+                  )
               )
 
-              pushed_date = pushed_at.strftime("%d %b %Y")
+              pushed_date = pushed_at.strftime(
+                  "%d %b %Y"
+              )
 
-              stars = repo.get("stargazers_count", 0)
+              stars = repo.get(
+                  "stargazers_count",
+                  0,
+              )
 
-              block = f"""### 📦 [{repo['name']}]({repo['html_url']})
+              block = f"""### 📦 [{repo["name"]}]({repo["html_url"]})
 
           {description}
 
@@ -123,7 +190,10 @@ jobs:
 
               blocks.append(block)
 
-          generated = "\n\n---\n\n".join(blocks)
+
+          generated_repositories = (
+              "\n\n---\n\n".join(blocks)
+          )
 
           start_marker = "<!-- AUTO-REPOS:START -->"
           end_marker = "<!-- AUTO-REPOS:END -->"
@@ -131,17 +201,16 @@ jobs:
           replacement = (
               start_marker
               + "\n"
-              + generated
+              + generated_repositories
               + "\n"
               + end_marker
           )
 
-          with open(
-              "README.md",
-              "r",
-              encoding="utf-8",
-          ) as file:
-              readme = file.read()
+          readme_path = Path("README.md")
+
+          readme = readme_path.read_text(
+              encoding="utf-8"
+          )
 
           pattern = re.compile(
               re.escape(start_marker)
@@ -155,35 +224,337 @@ jobs:
                   "AUTO-REPOS markers were not found in README.md"
               )
 
-          updated_readme = pattern.sub(
+          readme = pattern.sub(
               replacement,
               readme,
           )
 
-          with open(
-              "README.md",
-              "w",
+          readme_path.write_text(
+              readme,
               encoding="utf-8",
-          ) as file:
-              file.write(updated_readme)
+          )
+
+
+          # ---------------------------------------------------------
+          # Generate complete language usage SVG
+          # ---------------------------------------------------------
+
+          language_colors = {
+              "Python": "#3572A5",
+              "C++": "#F34B7D",
+              "C": "#555555",
+              "JavaScript": "#F1E05A",
+              "TypeScript": "#3178C6",
+              "HTML": "#E34C26",
+              "CSS": "#563D7C",
+              "SQL": "#E38C00",
+              "Shell": "#89E051",
+              "PowerShell": "#012456",
+              "Dockerfile": "#384D54",
+              "Java": "#B07219",
+              "PHP": "#4F5D95",
+              "Ruby": "#701516",
+              "Go": "#00ADD8",
+              "Rust": "#DEA584",
+              "C#": "#178600",
+              "Kotlin": "#A97BFF",
+              "Swift": "#F05138",
+              "Lua": "#000080",
+              "Dart": "#00B4AB",
+              "Vue": "#41B883",
+              "SCSS": "#C6538C",
+              "Jupyter Notebook": "#DA5B0B",
+              "Wolfram Language": "#DD1100",
+          }
+
+          fallback_colors = [
+              "#58A6FF",
+              "#3FB950",
+              "#D29922",
+              "#F85149",
+              "#A371F7",
+              "#DB61A2",
+              "#39C5CF",
+              "#FF7B72",
+              "#79C0FF",
+              "#56D364",
+          ]
+
+
+          sorted_languages = sorted(
+              language_totals.items(),
+              key=lambda item: item[1],
+              reverse=True,
+          )
+
+          total_bytes = sum(
+              byte_count
+              for _, byte_count in sorted_languages
+          )
+
+          if not sorted_languages:
+              sorted_languages = [
+                  ("No languages detected", 1)
+              ]
+              total_bytes = 1
+
+
+          card_width = 430
+          card_height = max(
+              280,
+              92 + len(sorted_languages) * 27,
+          )
+
+          donut_x = 120
+          donut_y = card_height / 2
+          donut_radius = 58
+
+          legend_x = 220
+          legend_y = 88
+
+          svg = []
+
+          svg.append(
+              f'''<svg xmlns="http://www.w3.org/2000/svg"
+              width="{card_width}"
+              height="{card_height}"
+              viewBox="0 0 {card_width} {card_height}">'''
+          )
+
+          svg.append(
+              '''
+              <rect
+                x="1"
+                y="1"
+                width="428"
+                height="100%"
+                rx="8"
+                fill="#0d1117"
+                stroke="#30363d"
+              />
+              '''
+          )
+
+          svg.append(
+              '''
+              <style>
+                text {
+                  font-family:
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Helvetica,
+                    Arial,
+                    sans-serif;
+                }
+
+                .title {
+                  fill: #58a6ff;
+                  font-size: 19px;
+                  font-weight: 500;
+                }
+
+                .subtitle {
+                  fill: #8b949e;
+                  font-size: 11px;
+                }
+
+                .language {
+                  fill: #c9d1d9;
+                  font-size: 12px;
+                }
+
+                .percentage {
+                  fill: #8b949e;
+                  font-size: 12px;
+                }
+
+                .center-value {
+                  fill: #f0f6fc;
+                  font-size: 17px;
+                  font-weight: 600;
+                }
+
+                .center-label {
+                  fill: #8b949e;
+                  font-size: 10px;
+                }
+              </style>
+              '''
+          )
+
+          svg.append(
+              '''
+              <text
+                x="24"
+                y="34"
+                class="title">
+                All Repository Languages
+              </text>
+
+              <text
+                x="24"
+                y="54"
+                class="subtitle">
+                Share of code across public repositories
+              </text>
+              '''
+          )
+
+          svg.append(
+              f'''
+              <circle
+                cx="{donut_x}"
+                cy="{donut_y}"
+                r="{donut_radius}"
+                fill="none"
+                stroke="#21262d"
+                stroke-width="22"
+              />
+              '''
+          )
+
+          offset = 0.0
+
+          for index, (language, byte_count) in enumerate(
+              sorted_languages
+          ):
+              percentage = (
+                  byte_count / total_bytes
+              ) * 100
+
+              color = language_colors.get(
+                  language,
+                  fallback_colors[
+                      index % len(fallback_colors)
+                  ],
+              )
+
+              svg.append(
+                  f'''
+                  <circle
+                    cx="{donut_x}"
+                    cy="{donut_y}"
+                    r="{donut_radius}"
+                    fill="none"
+                    stroke="{color}"
+                    stroke-width="22"
+                    pathLength="100"
+                    stroke-dasharray="{percentage:.4f} {100 - percentage:.4f}"
+                    stroke-dashoffset="-{offset:.4f}"
+                    transform="rotate(-90 {donut_x} {donut_y})"
+                  />
+                  '''
+              )
+
+              offset += percentage
+
+
+          svg.append(
+              f'''
+              <text
+                x="{donut_x}"
+                y="{donut_y - 2}"
+                text-anchor="middle"
+                class="center-value">
+                100%
+              </text>
+
+              <text
+                x="{donut_x}"
+                y="{donut_y + 16}"
+                text-anchor="middle"
+                class="center-label">
+                repository code
+              </text>
+              '''
+          )
+
+
+          for index, (language, byte_count) in enumerate(
+              sorted_languages
+          ):
+              percentage = (
+                  byte_count / total_bytes
+              ) * 100
+
+              color = language_colors.get(
+                  language,
+                  fallback_colors[
+                      index % len(fallback_colors)
+                  ],
+              )
+
+              y = legend_y + index * 27
+
+              safe_language = html.escape(language)
+
+              svg.append(
+                  f'''
+                  <circle
+                    cx="{legend_x}"
+                    cy="{y - 4}"
+                    r="5"
+                    fill="{color}"
+                  />
+
+                  <text
+                    x="{legend_x + 13}"
+                    y="{y}"
+                    class="language">
+                    {safe_language}
+                  </text>
+
+                  <text
+                    x="405"
+                    y="{y}"
+                    text-anchor="end"
+                    class="percentage">
+                    {percentage:.2f}%
+                  </text>
+                  '''
+              )
+
+
+          svg.append("</svg>")
+
+          output_directory = Path("generated")
+          output_directory.mkdir(
+              parents=True,
+              exist_ok=True,
+          )
+
+          Path(
+              "generated/languages.svg"
+          ).write_text(
+              "\n".join(svg),
+              encoding="utf-8",
+          )
 
           print(
-              f"Updated README with "
-              f"{len(repositories)} repositories."
+              f"Processed {len(repositories)} repositories."
+          )
+
+          print(
+              f"Detected {len(sorted_languages)} languages."
+          )
+
+          print(
+              "README and languages.svg updated."
           )
           PY
 
-      - name: Commit updated README
+      - name: Commit profile updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add README.md
+          git add README.md generated/languages.svg
 
           if git diff --cached --quiet; then
-            echo "No repository changes detected."
+            echo "No profile changes detected."
             exit 0
           fi
 
-          git commit -m "chore: sync latest repositories"
+          git commit -m "chore: sync profile data"
           git push
