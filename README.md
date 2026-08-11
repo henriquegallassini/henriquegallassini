@@ -71,10 +71,6 @@
 
 ## ✨ Featured Projects
 
-<sub>Selected projects that best represent my current work and studies.</sub>
-
-<br><br>
-
 ### 🧮 [BMI Calculator - JavaScript](https://github.com/henriquegallassini/Calculadora-IMC-Javascript)
 
 Interactive BMI calculator built with JavaScript, HTML and CSS.
@@ -109,68 +105,54 @@ Automated workflow for document extraction, management and follow-up.
 
 ## 🆕 Latest Repositories
 
-<sub>Automatically synchronized with my latest public GitHub repositories.</sub>
-
-<br><br>
-
 <!-- AUTO-REPOS:START -->
+
 ### 📦 [Calculadora-IMC-Javascript](https://github.com/henriquegallassini/Calculadora-IMC-Javascript)
 
-Public GitHub repository.
+Interactive BMI calculator built with JavaScript, HTML and CSS.
 
 `CSS` `JavaScript` `HTML`
-
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 11 Aug 2026</sub>
-
----
-
-### 📦 [Make-AI-Automation-IRPF](https://github.com/henriquegallassini/Make-AI-Automation-IRPF)
-
-Automação integrada de IRPF com Make, Gemini, OpenAI, Supabase/PostgreSQL e Gmail para extração de dados, gestão de documentos e cobrança de pendências.
-
-`SQL`
-
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 17 Jul 2026</sub>
 
 ---
 
 ### 📦 [MAKE-AI-Automation-Doc-Classifier-Swot](https://github.com/henriquegallassini/MAKE-AI-Automation-Doc-Classifier-Swot)
 
-Automação no Make com OpenAI para classificar documentos contábeis e fiscais, extrair dados e gerar análises SWOT.
+AI-powered document classification and SWOT automation.
 
-`Repository`
+`Automation`
 
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 17 Jul 2026</sub>
+---
+
+### 📦 [Make-AI-Automation-IRPF](https://github.com/henriquegallassini/Make-AI-Automation-IRPF)
+
+Integrated automation for income-tax document management.
+
+`SQL`
 
 ---
 
 ### 📦 [AI-Reviewer-CLI-V.1.0.0](https://github.com/henriquegallassini/AI-Reviewer-CLI-V.1.0.0)
 
-🔍 AI Reviewer CLI Um analisador de código Python inteligente que roda direto no terminal — sem API, sem custo, 100% local.
+Intelligent local Python source-code analyzer.
 
 `Python`
-
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 20 May 2026</sub>
 
 ---
 
 ### 📦 [Calculadora-C-](https://github.com/henriquegallassini/Calculadora-C-)
 
-🧮 Calculadora C++ Calculadora de terminal desenvolvida em C++ com menu interativo, validação de entradas e operações matemáticas essenciais.
+Interactive terminal calculator developed in C++.
 
 `C++`
-
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 07 May 2026</sub>
 
 ---
 
 ### 📦 [Port-Scan-with-Python](https://github.com/henriquegallassini/Port-Scan-with-Python)
 
-This program is based on the Python programming language, i used the socket library to develop this tool.
+Python-based network port scanner using sockets.
 
 `Python`
 
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 06 May 2026</sub>
 <!-- AUTO-REPOS:END -->
 
 ---
@@ -180,32 +162,22 @@ This program is based on the Python programming language, i used the socket libr
 <p align="center">
   <img
     width="49%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=henriquegallassini&theme=github_dark&animation=load&duration=2"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=henriquegallassini&theme=github_dark"
     alt="GitHub Stats"
   />
+
   <img
     width="49%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=henriquegallassini&theme=github_dark&animation=load&duration=2"
-    alt="Repositories per Language"
+    src="./generated/languages.svg"
+    alt="All Repository Languages"
   />
 </p>
 
 <p align="center">
   <img
     width="98%"
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=henriquegallassini&theme=github_dark&animation=load&duration=2"
+    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=henriquegallassini&theme=github_dark"
     alt="GitHub Profile Details"
-  />
-</p>
-
----
-
-## 🔥 Contribution Streak
-
-<p align="center">
-  <img
-    src="https://streak-stats.demolab.com?user=henriquegallassini&theme=github-dark-blue&hide_border=true"
-    alt="GitHub Streak"
   />
 </p>
 
@@ -280,7 +252,6 @@ real-world business problems.
 </details>
 
 ---
-
 <p align="center">
   <b>🚀 Always learning. Always building.</b>
 </p>
