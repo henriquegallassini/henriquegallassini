@@ -106,53 +106,63 @@ Automated workflow for document extraction, management and follow-up.
 ## 🆕 Latest Repositories
 
 <!-- AUTO-REPOS:START -->
-
 ### 📦 [Calculadora-IMC-Javascript](https://github.com/henriquegallassini/Calculadora-IMC-Javascript)
 
-Interactive BMI calculator built with JavaScript, HTML and CSS.
+Public GitHub repository.
 
 `CSS` `JavaScript` `HTML`
 
----
-
-### 📦 [MAKE-AI-Automation-Doc-Classifier-Swot](https://github.com/henriquegallassini/MAKE-AI-Automation-Doc-Classifier-Swot)
-
-AI-powered document classification and SWOT automation.
-
-`Automation`
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 11 Aug 2026</sub>
 
 ---
 
 ### 📦 [Make-AI-Automation-IRPF](https://github.com/henriquegallassini/Make-AI-Automation-IRPF)
 
-Integrated automation for income-tax document management.
+Automação integrada de IRPF com Make, Gemini, OpenAI, Supabase/PostgreSQL e Gmail para extração de dados, gestão de documentos e cobrança de pendências.
 
 `SQL`
+
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 17 Jul 2026</sub>
+
+---
+
+### 📦 [MAKE-AI-Automation-Doc-Classifier-Swot](https://github.com/henriquegallassini/MAKE-AI-Automation-Doc-Classifier-Swot)
+
+Automação no Make com OpenAI para classificar documentos contábeis e fiscais, extrair dados e gerar análises SWOT.
+
+`Repository`
+
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 17 Jul 2026</sub>
 
 ---
 
 ### 📦 [AI-Reviewer-CLI-V.1.0.0](https://github.com/henriquegallassini/AI-Reviewer-CLI-V.1.0.0)
 
-Intelligent local Python source-code analyzer.
+🔍 AI Reviewer CLI Um analisador de código Python inteligente que roda direto no terminal — sem API, sem custo, 100% local.
 
 `Python`
+
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 20 May 2026</sub>
 
 ---
 
 ### 📦 [Calculadora-C-](https://github.com/henriquegallassini/Calculadora-C-)
 
-Interactive terminal calculator developed in C++.
+🧮 Calculadora C++ Calculadora de terminal desenvolvida em C++ com menu interativo, validação de entradas e operações matemáticas essenciais.
 
 `C++`
+
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 07 May 2026</sub>
 
 ---
 
 ### 📦 [Port-Scan-with-Python](https://github.com/henriquegallassini/Port-Scan-with-Python)
 
-Python-based network port scanner using sockets.
+This program is based on the Python programming language, i used the socket library to develop this tool.
 
 `Python`
 
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 06 May 2026</sub>
 <!-- AUTO-REPOS:END -->
 
 ---
