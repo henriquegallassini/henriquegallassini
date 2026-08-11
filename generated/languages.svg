@@ -1,0 +1,325 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="430"
+    height="280"
+    viewBox="0 0 430 280">
+
+    <rect
+      x="1"
+      y="1"
+      width="428"
+      height="100%"
+      rx="8"
+      fill="#0d1117"
+      stroke="#30363d"
+    />
+    
+
+    <style>
+      text {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+
+      .title {
+        fill: #58a6ff;
+        font-size: 19px;
+        font-weight: 500;
+      }
+
+      .subtitle {
+        fill: #8b949e;
+        font-size: 11px;
+      }
+
+      .language {
+        fill: #c9d1d9;
+        font-size: 12px;
+      }
+
+      .percentage {
+        fill: #8b949e;
+        font-size: 12px;
+      }
+
+      .center-value {
+        fill: #f0f6fc;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      .center-label {
+        fill: #8b949e;
+        font-size: 10px;
+      }
+    </style>
+    
+
+    <text
+      x="24"
+      y="34"
+      class="title">
+      All Repository Languages
+    </text>
+
+    <text
+      x="24"
+      y="54"
+      class="subtitle">
+      Share of code across public repositories
+    </text>
+    
+
+    <circle
+      cx="120"
+      cy="140.0"
+      r="58"
+      fill="none"
+      stroke="#21262d"
+      stroke-width="22"
+    />
+    
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
+          stroke="#E38C00"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="25.8848 74.1152"
+          stroke-dashoffset="-0.0000"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
+          stroke="#F34B7D"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="23.9049 76.0951"
+          stroke-dashoffset="-25.8848"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
+          stroke="#3572A5"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="14.0558 85.9442"
+          stroke-dashoffset="-49.7897"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
+          stroke="#563D7C"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="13.5846 86.4154"
+          stroke-dashoffset="-63.8454"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
+          stroke="#F1E05A"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="12.1880 87.8120"
+          stroke-dashoffset="-77.4300"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
+          stroke="#E34C26"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="10.3820 89.6180"
+          stroke-dashoffset="-89.6180"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+    <text
+      x="120"
+      y="138.0"
+      text-anchor="middle"
+      class="center-value">
+      100%
+    </text>
+
+    <text
+      x="120"
+      y="156.0"
+      text-anchor="middle"
+      class="center-label">
+      repository code
+    </text>
+    
+
+        <circle
+          cx="220"
+          cy="84"
+          r="5"
+          fill="#E38C00"
+        />
+
+        <text
+          x="233"
+          y="88"
+          class="language">
+          SQL
+        </text>
+
+        <text
+          x="405"
+          y="88"
+          text-anchor="end"
+          class="percentage">
+          25.88%
+        </text>
+        
+
+        <circle
+          cx="220"
+          cy="111"
+          r="5"
+          fill="#F34B7D"
+        />
+
+        <text
+          x="233"
+          y="115"
+          class="language">
+          C++
+        </text>
+
+        <text
+          x="405"
+          y="115"
+          text-anchor="end"
+          class="percentage">
+          23.90%
+        </text>
+        
+
+        <circle
+          cx="220"
+          cy="138"
+          r="5"
+          fill="#3572A5"
+        />
+
+        <text
+          x="233"
+          y="142"
+          class="language">
+          Python
+        </text>
+
+        <text
+          x="405"
+          y="142"
+          text-anchor="end"
+          class="percentage">
+          14.06%
+        </text>
+        
+
+        <circle
+          cx="220"
+          cy="165"
+          r="5"
+          fill="#563D7C"
+        />
+
+        <text
+          x="233"
+          y="169"
+          class="language">
+          CSS
+        </text>
+
+        <text
+          x="405"
+          y="169"
+          text-anchor="end"
+          class="percentage">
+          13.58%
+        </text>
+        
+
+        <circle
+          cx="220"
+          cy="192"
+          r="5"
+          fill="#F1E05A"
+        />
+
+        <text
+          x="233"
+          y="196"
+          class="language">
+          JavaScript
+        </text>
+
+        <text
+          x="405"
+          y="196"
+          text-anchor="end"
+          class="percentage">
+          12.19%
+        </text>
+        
+
+        <circle
+          cx="220"
+          cy="219"
+          r="5"
+          fill="#E34C26"
+        />
+
+        <text
+          x="233"
+          y="223"
+          class="language">
+          HTML
+        </text>
+
+        <text
+          x="405"
+          y="223"
+          text-anchor="end"
+          class="percentage">
+          10.38%
+        </text>
+        
+</svg>
