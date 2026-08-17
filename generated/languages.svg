@@ -89,11 +89,25 @@
           cy="140.0"
           r="58"
           fill="none"
+          stroke="#F1E05A"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="21.8771 78.1229"
+          stroke-dashoffset="-0.0000"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
           stroke="#E38C00"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="25.8848 74.1152"
-          stroke-dashoffset="-0.0000"
+          stroke-dasharray="19.3973 80.6027"
+          stroke-dashoffset="-21.8771"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -106,22 +120,8 @@
           stroke="#F34B7D"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="23.9049 76.0951"
-          stroke-dashoffset="-25.8848"
-          transform="rotate(-90 120 140.0)"
-        />
-        
-
-        <circle
-          cx="120"
-          cy="140.0"
-          r="58"
-          fill="none"
-          stroke="#3572A5"
-          stroke-width="22"
-          pathLength="100"
-          stroke-dasharray="14.0558 85.9442"
-          stroke-dashoffset="-49.7897"
+          stroke-dasharray="17.9136 82.0864"
+          stroke-dashoffset="-41.2744"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -134,22 +134,8 @@
           stroke="#563D7C"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="13.5846 86.4154"
-          stroke-dashoffset="-63.8454"
-          transform="rotate(-90 120 140.0)"
-        />
-        
-
-        <circle
-          cx="120"
-          cy="140.0"
-          r="58"
-          fill="none"
-          stroke="#F1E05A"
-          stroke-width="22"
-          pathLength="100"
-          stroke-dasharray="12.1880 87.8120"
-          stroke-dashoffset="-77.4300"
+          stroke-dasharray="16.2408 83.7592"
+          stroke-dashoffset="-59.1880"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -162,8 +148,22 @@
           stroke="#E34C26"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="10.3820 89.6180"
-          stroke-dashoffset="-89.6180"
+          stroke-dasharray="14.0383 85.9617"
+          stroke-dashoffset="-75.4287"
+          transform="rotate(-90 120 140.0)"
+        />
+        
+
+        <circle
+          cx="120"
+          cy="140.0"
+          r="58"
+          fill="none"
+          stroke="#3572A5"
+          stroke-width="22"
+          pathLength="100"
+          stroke-dasharray="10.5330 89.4670"
+          stroke-dashoffset="-89.4670"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -189,14 +189,14 @@
           cx="220"
           cy="84"
           r="5"
-          fill="#E38C00"
+          fill="#F1E05A"
         />
 
         <text
           x="233"
           y="88"
           class="language">
-          SQL
+          JavaScript
         </text>
 
         <text
@@ -204,7 +204,7 @@
           y="88"
           text-anchor="end"
           class="percentage">
-          25.88%
+          21.88%
         </text>
         
 
@@ -212,14 +212,14 @@
           cx="220"
           cy="111"
           r="5"
-          fill="#F34B7D"
+          fill="#E38C00"
         />
 
         <text
           x="233"
           y="115"
           class="language">
-          C++
+          SQL
         </text>
 
         <text
@@ -227,7 +227,7 @@
           y="115"
           text-anchor="end"
           class="percentage">
-          23.90%
+          19.40%
         </text>
         
 
@@ -235,14 +235,14 @@
           cx="220"
           cy="138"
           r="5"
-          fill="#3572A5"
+          fill="#F34B7D"
         />
 
         <text
           x="233"
           y="142"
           class="language">
-          Python
+          C++
         </text>
 
         <text
@@ -250,7 +250,7 @@
           y="142"
           text-anchor="end"
           class="percentage">
-          14.06%
+          17.91%
         </text>
         
 
@@ -273,7 +273,7 @@
           y="169"
           text-anchor="end"
           class="percentage">
-          13.58%
+          16.24%
         </text>
         
 
@@ -281,14 +281,14 @@
           cx="220"
           cy="192"
           r="5"
-          fill="#F1E05A"
+          fill="#E34C26"
         />
 
         <text
           x="233"
           y="196"
           class="language">
-          JavaScript
+          HTML
         </text>
 
         <text
@@ -296,7 +296,7 @@
           y="196"
           text-anchor="end"
           class="percentage">
-          12.19%
+          14.04%
         </text>
         
 
@@ -304,14 +304,14 @@
           cx="220"
           cy="219"
           r="5"
-          fill="#E34C26"
+          fill="#3572A5"
         />
 
         <text
           x="233"
           y="223"
           class="language">
-          HTML
+          Python
         </text>
 
         <text
@@ -319,7 +319,7 @@
           y="223"
           text-anchor="end"
           class="percentage">
-          10.38%
+          10.53%
         </text>
         
 </svg>

@@ -106,6 +106,16 @@ Automated workflow for document extraction, management and follow-up.
 ## 🆕 Latest Repositories
 
 <!-- AUTO-REPOS:START -->
+### 📦 [DataDiff](https://github.com/henriquegallassini/DataDiff)
+
+Public GitHub repository.
+
+`JavaScript` `HTML` `CSS`
+
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 17 Aug 2026</sub>
+
+---
+
 ### 📦 [Calculadora-IMC-Javascript](https://github.com/henriquegallassini/Calculadora-IMC-Javascript)
 
 Public GitHub repository.
@@ -153,16 +163,6 @@ Automação no Make com OpenAI para classificar documentos contábeis e fiscais,
 `C++`
 
 <sub>⭐ 1 &nbsp;•&nbsp; Last push: 07 May 2026</sub>
-
----
-
-### 📦 [Port-Scan-with-Python](https://github.com/henriquegallassini/Port-Scan-with-Python)
-
-This program is based on the Python programming language, i used the socket library to develop this tool.
-
-`Python`
-
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 06 May 2026</sub>
 <!-- AUTO-REPOS:END -->
 
 ---
