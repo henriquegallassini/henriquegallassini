@@ -106,6 +106,16 @@ Automated workflow for document extraction, management and follow-up.
 ## 🆕 Latest Repositories
 
 <!-- AUTO-REPOS:START -->
+### 📦 [Calculadora-C-](https://github.com/henriquegallassini/Calculadora-C-)
+
+🧮 Calculadora C++ Calculadora de terminal desenvolvida em C++ com menu interativo, validação de entradas e operações matemáticas essenciais.
+
+`C++`
+
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 17 Aug 2026</sub>
+
+---
+
 ### 📦 [DataDiff](https://github.com/henriquegallassini/DataDiff)
 
 Public GitHub repository.
@@ -153,16 +163,6 @@ Automação no Make com OpenAI para classificar documentos contábeis e fiscais,
 `Python`
 
 <sub>⭐ 1 &nbsp;•&nbsp; Last push: 20 May 2026</sub>
-
----
-
-### 📦 [Calculadora-C-](https://github.com/henriquegallassini/Calculadora-C-)
-
-🧮 Calculadora C++ Calculadora de terminal desenvolvida em C++ com menu interativo, validação de entradas e operações matemáticas essenciais.
-
-`C++`
-
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 07 May 2026</sub>
 <!-- AUTO-REPOS:END -->
 
 ---
