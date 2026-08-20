@@ -89,10 +89,10 @@
           cy="140.0"
           r="58"
           fill="none"
-          stroke="#F1E05A"
+          stroke="#F34B7D"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="21.1405 78.8595"
+          stroke-dasharray="23.4418 76.5582"
           stroke-dashoffset="-0.0000"
           transform="rotate(-90 120 140.0)"
         />
@@ -103,11 +103,11 @@
           cy="140.0"
           r="58"
           fill="none"
-          stroke="#F34B7D"
+          stroke="#F1E05A"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="20.6775 79.3225"
-          stroke-dashoffset="-21.1405"
+          stroke-dasharray="20.4038 79.5962"
+          stroke-dashoffset="-23.4418"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -120,8 +120,8 @@
           stroke="#E38C00"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="18.7442 81.2558"
-          stroke-dashoffset="-41.8180"
+          stroke-dasharray="18.0909 81.9091"
+          stroke-dashoffset="-43.8456"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -134,8 +134,8 @@
           stroke="#563D7C"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="15.6939 84.3061"
-          stroke-dashoffset="-60.5621"
+          stroke-dasharray="15.1470 84.8530"
+          stroke-dashoffset="-61.9365"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -148,8 +148,8 @@
           stroke="#E34C26"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="13.5657 86.4343"
-          stroke-dashoffset="-76.2560"
+          stroke-dasharray="13.0929 86.9071"
+          stroke-dashoffset="-77.0835"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -162,8 +162,8 @@
           stroke="#3572A5"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="10.1783 89.8217"
-          stroke-dashoffset="-89.8217"
+          stroke-dasharray="9.8236 90.1764"
+          stroke-dashoffset="-90.1764"
           transform="rotate(-90 120 140.0)"
         />
         
@@ -189,14 +189,14 @@
           cx="220"
           cy="84"
           r="5"
-          fill="#F1E05A"
+          fill="#F34B7D"
         />
 
         <text
           x="233"
           y="88"
           class="language">
-          JavaScript
+          C++
         </text>
 
         <text
@@ -204,7 +204,7 @@
           y="88"
           text-anchor="end"
           class="percentage">
-          21.14%
+          23.44%
         </text>
         
 
@@ -212,14 +212,14 @@
           cx="220"
           cy="111"
           r="5"
-          fill="#F34B7D"
+          fill="#F1E05A"
         />
 
         <text
           x="233"
           y="115"
           class="language">
-          C++
+          JavaScript
         </text>
 
         <text
@@ -227,7 +227,7 @@
           y="115"
           text-anchor="end"
           class="percentage">
-          20.68%
+          20.40%
         </text>
         
 
@@ -250,7 +250,7 @@
           y="142"
           text-anchor="end"
           class="percentage">
-          18.74%
+          18.09%
         </text>
         
 
@@ -273,7 +273,7 @@
           y="169"
           text-anchor="end"
           class="percentage">
-          15.69%
+          15.15%
         </text>
         
 
@@ -296,7 +296,7 @@
           y="196"
           text-anchor="end"
           class="percentage">
-          13.57%
+          13.09%
         </text>
         
 
@@ -319,7 +319,7 @@
           y="223"
           text-anchor="end"
           class="percentage">
-          10.18%
+          9.82%
         </text>
         
 </svg>
