@@ -110,9 +110,9 @@ Automated workflow for document extraction, management and follow-up.
 
 🧮 Calculadora C++ Calculadora de terminal desenvolvida em C++ com menu interativo, validação de entradas e operações matemáticas essenciais.
 
-`C++`
+`C++` `CMake`
 
-<sub>⭐ 1 &nbsp;•&nbsp; Last push: 20 Aug 2026</sub>
+<sub>⭐ 1 &nbsp;•&nbsp; Last push: 21 Aug 2026</sub>
 
 ---
 
