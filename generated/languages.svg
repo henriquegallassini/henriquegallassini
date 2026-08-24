@@ -92,7 +92,7 @@
           stroke="#F34B7D"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="23.6883 76.3117"
+          stroke-dasharray="24.7165 75.2835"
           stroke-dashoffset="-0.0000"
           transform="rotate(-90 120 140.5)"
         />
@@ -106,8 +106,8 @@
           stroke="#F1E05A"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="19.7181 80.2819"
-          stroke-dashoffset="-23.6883"
+          stroke-dasharray="18.8607 81.1393"
+          stroke-dashoffset="-24.7165"
           transform="rotate(-90 120 140.5)"
         />
         
@@ -120,8 +120,8 @@
           stroke="#E38C00"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="17.4830 82.5170"
-          stroke-dashoffset="-43.4064"
+          stroke-dasharray="16.7228 83.2772"
+          stroke-dashoffset="-43.5772"
           transform="rotate(-90 120 140.5)"
         />
         
@@ -134,8 +134,8 @@
           stroke="#563D7C"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="14.6380 85.3620"
-          stroke-dashoffset="-60.8895"
+          stroke-dasharray="14.0015 85.9985"
+          stroke-dashoffset="-60.3000"
           transform="rotate(-90 120 140.5)"
         />
         
@@ -148,8 +148,8 @@
           stroke="#E34C26"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="12.6530 87.3470"
-          stroke-dashoffset="-75.5275"
+          stroke-dasharray="12.1028 87.8972"
+          stroke-dashoffset="-74.3016"
           transform="rotate(-90 120 140.5)"
         />
         
@@ -162,8 +162,8 @@
           stroke="#3572A5"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="9.4935 90.5065"
-          stroke-dashoffset="-88.1805"
+          stroke-dasharray="9.0807 90.9193"
+          stroke-dashoffset="-86.4043"
           transform="rotate(-90 120 140.5)"
         />
         
@@ -176,8 +176,8 @@
           stroke="#39C5CF"
           stroke-width="22"
           pathLength="100"
-          stroke-dasharray="2.3260 97.6740"
-          stroke-dashoffset="-97.6740"
+          stroke-dasharray="4.5150 95.4850"
+          stroke-dashoffset="-95.4850"
           transform="rotate(-90 120 140.5)"
         />
         
@@ -218,7 +218,7 @@
           y="88"
           text-anchor="end"
           class="percentage">
-          23.69%
+          24.72%
         </text>
         
 
@@ -241,7 +241,7 @@
           y="115"
           text-anchor="end"
           class="percentage">
-          19.72%
+          18.86%
         </text>
         
 
@@ -264,7 +264,7 @@
           y="142"
           text-anchor="end"
           class="percentage">
-          17.48%
+          16.72%
         </text>
         
 
@@ -287,7 +287,7 @@
           y="169"
           text-anchor="end"
           class="percentage">
-          14.64%
+          14.00%
         </text>
         
 
@@ -310,7 +310,7 @@
           y="196"
           text-anchor="end"
           class="percentage">
-          12.65%
+          12.10%
         </text>
         
 
@@ -333,7 +333,7 @@
           y="223"
           text-anchor="end"
           class="percentage">
-          9.49%
+          9.08%
         </text>
         
 
@@ -356,7 +356,7 @@
           y="250"
           text-anchor="end"
           class="percentage">
-          2.33%
+          4.51%
         </text>
         
 </svg>
